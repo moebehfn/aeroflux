@@ -20,7 +20,7 @@ def test_mkdocs_config_valid():
     assert "theme" in config, "theme missing in mkdocs.yml"
     assert "plugins" in config, "plugins missing in mkdocs.yml"
 
-    assert config["site_name"] == "lightaero"
+    assert config["site_name"] == "aeroflux"
     assert config["theme"]["name"] == "material"
 
 

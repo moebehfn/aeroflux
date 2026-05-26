@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from lightaero.geometry.ucrm import build_ucrm_geometry
+from aeroflux.geometry.ucrm import build_ucrm_geometry
 
 wing = build_ucrm_geometry(n_panels=40)
 wing.plot_wing_3d(

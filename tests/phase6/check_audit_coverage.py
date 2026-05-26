@@ -43,7 +43,7 @@ def check_coverage(report_path, source_dir):
 
 if __name__ == "__main__":
     report = ".planning/phases/06-doc-audit/AUDIT_REPORT.md"
-    src = "src/lightaero"
+    src = "src/aeroflux"
 
     if not check_coverage(report, src):
         sys.exit(1)

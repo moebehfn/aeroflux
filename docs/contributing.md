@@ -1,6 +1,6 @@
-# Contributing to lightaero
+# Contributing to aeroflux
 
-Thank you for your interest in contributing to lightaero! As a research-focused project, we value contributions that improve the accuracy, documentation, and usability of the library.
+Thank you for your interest in contributing to aeroflux! As a research-focused project, we value contributions that improve the accuracy, documentation, and usability of the library.
 
 ## Workflow
 

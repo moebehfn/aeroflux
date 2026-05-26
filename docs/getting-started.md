@@ -1,16 +1,16 @@
 # Getting Started
 
-This guide will help you get up and running with lightaero.
+This guide will help you get up and running with aeroflux.
 
 ## Installation
 
-*Note: lightaero is currently in development. Packaging and 'pip install' support are planned for Phase 2.*
+*Note: aeroflux is currently in development. Packaging and 'pip install' support are planned for Phase 2.*
 
-To use lightaero now, clone the repository and install dependencies:
+To use aeroflux now, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/moebessd/lightaero.git
-cd lightaero
+git clone https://github.com/moebessd/aeroflux.git
+cd aeroflux
 pip install -r requirements.txt
 ```
 
@@ -20,7 +20,7 @@ The following example demonstrates how to build a UCRM wing geometry and generat
 
 ```python
 from pathlib import Path
-from lightaero.geometry.ucrm import build_ucrm_geometry
+from aeroflux.geometry.ucrm import build_ucrm_geometry
 
 # Build UCRM geometry with 4 sections
 wing = build_ucrm_geometry(4)

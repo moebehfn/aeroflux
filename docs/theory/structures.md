@@ -1,10 +1,10 @@
 # Structural Theory
 
-This page details the structural analysis methods and assumptions used in lightaero.
+This page details the structural analysis methods and assumptions used in aeroflux.
 
 ## Finite Element Model (FEM)
 
-lightaero implements a 1D finite-element model of the wing spar based on Euler-Bernoulli beam theory.
+aeroflux implements a 1D finite-element model of the wing spar based on Euler-Bernoulli beam theory.
 
 ### Euler-Bernoulli Beam
 
@@ -39,7 +39,7 @@ $$
 where $\rho$ is the material density and $A$ is the cross-sectional area.
 
 !!! warning "Implementation Note: Static Analysis Only"
-    Although the theoretical mass matrix formulas are provided above, the current structural discipline implementation in lightaero is limited to **static analysis**. Dynamic effects such as flutter, gust response, and modal analysis are not yet supported.
+    Although the theoretical mass matrix formulas are provided above, the current structural discipline implementation in aeroflux is limited to **static analysis**. Dynamic effects such as flutter, gust response, and modal analysis are not yet supported.
 
 ### Thin-Walled Section Properties
 

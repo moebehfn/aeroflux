@@ -1,4 +1,4 @@
-# Copyright 2026 lightaero
+# Copyright 2026 aeroflux
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +23,16 @@ def get_clean_body_length(docstring):
         return 0
 
     body_lines = []
-    sections = ["Args:", "Returns:", "Raises:", "Yields:", "Note:", "Example:", "Examples:", "Attributes:"]
+    sections = [
+        "Args:",
+        "Returns:",
+        "Raises:",
+        "Yields:",
+        "Note:",
+        "Example:",
+        "Examples:",
+        "Attributes:",
+    ]
 
     for line in docstring.splitlines():
         stripped = line.strip()
@@ -43,25 +52,25 @@ def has_doc_link(docstring):
 @pytest.mark.parametrize(
     "rel_path",
     [
-        "src/lightaero/aerodynamics/__init__.py",
-        "src/lightaero/aerodynamics/aeroelastic.py",
-        "src/lightaero/aerodynamics/aic.py",
-        "src/lightaero/aerodynamics/force.py",
-        "src/lightaero/aerodynamics/panel_mesh.py",
-        "src/lightaero/aerodynamics/solver.py",
-        "src/lightaero/atmosphere/isa.py",
-        "src/lightaero/geometry/airfoil.py",
-        "src/lightaero/geometry/crm.py",
-        "src/lightaero/geometry/dlrf4.py",
-        "src/lightaero/geometry/dlrf6.py",
-        "src/lightaero/geometry/ucrm.py",
-        "src/lightaero/geometry/wing.py",
-        "src/lightaero/registry/registry.py",
-        "src/lightaero/schemas/types.py",
-        "src/lightaero/schemas/validation.py",
-        "src/lightaero/structures/__init__.py",
-        "src/lightaero/structures/beam.py",
-        "src/lightaero/structures/mass.py",
+        "src/aeroflux/aerodynamics/__init__.py",
+        "src/aeroflux/aerodynamics/aeroelastic.py",
+        "src/aeroflux/aerodynamics/aic.py",
+        "src/aeroflux/aerodynamics/force.py",
+        "src/aeroflux/aerodynamics/panel_mesh.py",
+        "src/aeroflux/aerodynamics/solver.py",
+        "src/aeroflux/atmosphere/isa.py",
+        "src/aeroflux/geometry/airfoil.py",
+        "src/aeroflux/geometry/crm.py",
+        "src/aeroflux/geometry/dlrf4.py",
+        "src/aeroflux/geometry/dlrf6.py",
+        "src/aeroflux/geometry/ucrm.py",
+        "src/aeroflux/geometry/wing.py",
+        "src/aeroflux/registry/registry.py",
+        "src/aeroflux/schemas/types.py",
+        "src/aeroflux/schemas/validation.py",
+        "src/aeroflux/structures/__init__.py",
+        "src/aeroflux/structures/beam.py",
+        "src/aeroflux/structures/mass.py",
     ],
 )
 def test_docstring_minimization(rel_path):
@@ -92,8 +101,12 @@ def test_docstring_minimization(rel_path):
             doc = ast.get_docstring(node)
             if doc:
                 length = get_clean_body_length(doc)
-                assert length <= 10, f"Docstring in {rel_path} for {node.name} too long: {length} lines"
+                assert length <= 10, (
+                    f"Docstring in {rel_path} for {node.name} too long: {length} lines"
+                )
                 if has_doc_link(doc):
                     found_link = True
 
-    assert found_link, f"File {rel_path} missing 'See: docs/theory/...' link in module or class/function docstrings"
+    assert found_link, (
+        f"File {rel_path} missing 'See: docs/theory/...' link in module or class/function docstrings"
+    )

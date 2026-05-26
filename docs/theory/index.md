@@ -1,10 +1,10 @@
 # Theory & Physics
 
-This page contains detailed information about the aerodynamic physics, geometric modeling, and assumptions of the lightaero library.
+This page contains detailed information about the aerodynamic physics, geometric modeling, and assumptions of the aeroflux library.
 
 ## Geometry Modeling
 
-lightaero uses a parametric approach to define wing geometries, supporting both analytic (NACA 4-digit) and tabulated (UIUC .dat) airfoil sections.
+aeroflux uses a parametric approach to define wing geometries, supporting both analytic (NACA 4-digit) and tabulated (UIUC .dat) airfoil sections.
 
 ### Airfoil Sections
 
@@ -36,7 +36,7 @@ where $T$ is the maximum thickness.
 
 #### Tabulated Airfoils (UIUC .dat)
 
-lightaero supports loading airfoil coordinates from UIUC-style `.dat` files. It automatically detects both Selig (TE $\to$ LE $\to$ TE) and Lednicer (separate upper and lower surface) formats.
+aeroflux supports loading airfoil coordinates from UIUC-style `.dat` files. It automatically detects both Selig (TE $\to$ LE $\to$ TE) and Lednicer (separate upper and lower surface) formats.
 
 ### Wing Geometry
 
@@ -54,7 +54,7 @@ where $\alpha$ is the fractional distance between stations.
 
 #### Cosine Spacing
 
-To improve accuracy near the wing root and tip (where gradients are high), lightaero uses cosine spacing for spanwise paneling:
+To improve accuracy near the wing root and tip (where gradients are high), aeroflux uses cosine spacing for spanwise paneling:
 
 $$
 y_{node} = \frac{b}{4} (1 - \cos(\theta)), \quad \theta \in [0, \pi]
@@ -64,7 +64,7 @@ where $b/2$ is the semi-span.
 
 ## Reference Models
 
-lightaero includes several standard research geometries for benchmarking and validation.
+aeroflux includes several standard research geometries for benchmarking and validation.
 
 ### DLR-F4
 
@@ -93,7 +93,7 @@ The "unmodified" CRM (uCRM) provides a more detailed station-based definition of
 
 ## Assumptions & Limitations
 
-lightaero is intended for research-grade low-fidelity analysis and makes several simplifying assumptions to ensure computational efficiency.
+aeroflux is intended for research-grade low-fidelity analysis and makes several simplifying assumptions to ensure computational efficiency.
 
 Key limitations include:
 
@@ -105,7 +105,7 @@ For a detailed breakdown of validity regimes and physical limits, see the [Assum
 
 ## Registry and Fidelity Swapping
 
-lightaero uses a two-level namespace registry (family $\to$ key $\to$ class) to allow discipline implementations to be swapped by string key without modifying coupling logic.
+aeroflux uses a two-level namespace registry (family $\to$ key $\to$ class) to allow discipline implementations to be swapped by string key without modifying coupling logic.
 
 ### Registration Pattern
 
@@ -124,7 +124,7 @@ This architecture allows zero-change implementation swapping. A coupling algorit
 
 ## Data Contracts and Validation
 
-lightaero uses a structured data contract for inter-discipline communication, ensuring that outputs from one discipline are valid and plausible before being passed to another.
+aeroflux uses a structured data contract for inter-discipline communication, ensuring that outputs from one discipline are valid and plausible before being passed to another.
 
 ### Output Schemas
 

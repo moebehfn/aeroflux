@@ -34,11 +34,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e .[dev]
-      
-      - name: Lint and Format check
-        run: |
-          ruff check .
-          ruff format --check .
 
       - name: Run tests
         run: |

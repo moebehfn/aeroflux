@@ -1,5 +1,5 @@
-site_name: lightaero
-site_url: https://moebehfn.github.io/lightaero/
+site_name: aeroflux
+site_url: https://moebehfn.github.io/aeroflux/
 strict: true
 
 nav:
@@ -52,4 +52,4 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
 
-copyright: "Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 lightaero"
+copyright: "Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 aeroflux"

@@ -1,12 +1,12 @@
 # Assumptions & Limitations
 
-This page documents the physical and numerical boundaries of the lightaero library. As a low-fidelity tool intended for preliminary research, the library makes several standard simplifications that limit its applicability to specific flight regimes.
+This page documents the physical and numerical boundaries of the aeroflux library. As a low-fidelity tool intended for preliminary research, the library makes several standard simplifications that limit its applicability to specific flight regimes.
 
 ## Major Physical Assumptions
 
 ### Aerodynamics
 
-lightaero's primary aerodynamic solver is based on the **Vortex Lattice Method (VLM)**.
+aeroflux's primary aerodynamic solver is based on the **Vortex Lattice Method (VLM)**.
 
 - **Inviscid Flow**: The fluid is assumed to be inviscid (no boundary layers, no separation). While profile drag is estimated using empirical form factors, it does not capture separation-induced drag.
 - **Incompressible Flow**: The standard VLM implementation assumes the fluid is incompressible. Compressibility effects (Prandtl-Glauert) are currently not implemented.

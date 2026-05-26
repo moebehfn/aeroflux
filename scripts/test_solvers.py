@@ -1,8 +1,7 @@
 import numpy as np
-
-from lightaero.aerodynamics.solver import VLMDiscipline
-from lightaero.geometry import build_ucrm_geometry
-from lightaero.structures.solver import StructuralDiscipline
+from aeroflux.aerodynamics.solver import VLMDiscipline
+from aeroflux.geometry import build_ucrm_geometry
+from aeroflux.structures.solver import StructuralDiscipline
 
 crm_geometry = build_ucrm_geometry()
 

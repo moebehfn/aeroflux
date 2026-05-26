@@ -13,7 +13,7 @@ $$ H = \frac{R_e \cdot Z}{R_e + Z} $$
 where $R_e \approx 6,356,766$ m is the effective radius of the Earth for atmospheric calculations (ISO 2533:1975).
 
 !!! warning "Implementation Note: Geometric vs. Geopotential Altitude"
-    While the ISA model is formally defined in terms of geopotential altitude ($H$), the current lightaero implementation uses **geometric altitude** ($Z$) as the direct input for all atmospheric property calculations.
+    While the ISA model is formally defined in terms of geopotential altitude ($H$), the current aeroflux implementation uses **geometric altitude** ($Z$) as the direct input for all atmospheric property calculations.
 
     This simplification avoids the conversion step but introduces a small error that increases with altitude (approximately 0.16% at 10,000 m). For most preliminary research applications, this error is considered negligible.
 

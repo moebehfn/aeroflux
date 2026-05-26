@@ -14,7 +14,7 @@ def test_pyproject_metadata():
         data = tomllib.load(f)
 
     project = data.get("project", {})
-    assert project.get("name") == "lightaero"
+    assert project.get("name") == "aeroflux"
     assert project.get("version") == "0.1.0"
     assert project.get("license") == "Apache-2.0"
 
@@ -37,10 +37,24 @@ def test_hatch_config():
     with open("pyproject.toml", "rb") as f:
         data = tomllib.load(f)
 
-    hatch_wheel = data.get("tool", {}).get("hatch", {}).get("build", {}).get("targets", {}).get("wheel", {})
-    assert "src/lightaero" in hatch_wheel.get("packages", [])
+    hatch_wheel = (
+        data
+        .get("tool", {})
+        .get("hatch", {})
+        .get("build", {})
+        .get("targets", {})
+        .get("wheel", {})
+    )
+    assert "src/aeroflux" in hatch_wheel.get("packages", [])
 
-    hatch_sdist = data.get("tool", {}).get("hatch", {}).get("build", {}).get("targets", {}).get("sdist", {})
+    hatch_sdist = (
+        data
+        .get("tool", {})
+        .get("hatch", {})
+        .get("build", {})
+        .get("targets", {})
+        .get("sdist", {})
+    )
     exclude = hatch_sdist.get("exclude", [])
     assert "/.github" in exclude
     assert "/docs" in exclude
@@ -58,7 +72,9 @@ def test_pytest_config():
 def test_build_tool_version():
     """Verify build tool can be invoked."""
     try:
-        result = subprocess.run(["python3", "-m", "build", "--version"], capture_output=True, text=True)
+        result = subprocess.run(
+            ["python3", "-m", "build", "--version"], capture_output=True, text=True
+        )
         if result.returncode != 0:
             pytest.skip("python3 -m build is not working")
     except FileNotFoundError:

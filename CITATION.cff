@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
   - name: "Mohamed Ali Belhafnaoui"
-title: "lightaero"
+title: "aeroflux"
 version: 0.1.0
 date-released: 2026-05-06
-url: "https://github.com/moebessd/lightaero"
+url: "https://github.com/moebessd/aeroflux"
 preferred-citation:
   authors:
     - name: "Mohamed Ali Belhafnaoui"

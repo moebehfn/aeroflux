@@ -1,5 +1,5 @@
 # API Reference
 
-This page provides the automatically generated API documentation for the lightaero library.
+This page provides the automatically generated API documentation for the aeroflux library.
 
-::: lightaero
+::: aeroflux

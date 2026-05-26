@@ -1,9 +1,9 @@
-# lightaero
+# aeroflux
 
 > [!WARNING]
-> **Research Disclaimer**: lightaero is a low-fidelity aerodynamics analysis library intended for academic and research purposes only. It is **not** production-ready and should not be used for industrial engineering, safety-critical applications, or any scenario where high-fidelity results are required.
+> **Research Disclaimer**: aeroflux is a low-fidelity aerodynamics analysis library intended for academic and research purposes only. It is **not** production-ready and should not be used for industrial engineering, safety-critical applications, or any scenario where high-fidelity results are required.
 
-lightaero provides a lightweight, easy-to-use Python framework for performing basic aerodynamic analysis and geometry generation, specifically focused on wing structures.
+aeroflux provides a lightweight, easy-to-use Python framework for performing basic aerodynamic analysis and geometry generation, specifically focused on wing structures.
 
 ## Features
 
@@ -13,13 +13,13 @@ lightaero provides a lightweight, easy-to-use Python framework for performing ba
 
 ## Installation
 
-*Note: lightaero is currently in development. Packaging and 'pip install' support are planned for Phase 2.*
+*Note: aeroflux is currently in development. Packaging and 'pip install' support are planned for Phase 2.*
 
-To use lightaero now, clone the repository and install dependencies:
+To use aeroflux now, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/moebessd/lightaero.git
-cd lightaero
+git clone https://github.com/moebessd/aeroflux.git
+cd aeroflux
 pip install -r requirements.txt
 ```
 
@@ -29,7 +29,7 @@ The following example demonstrates how to build a UCRM wing geometry and generat
 
 ```python
 from pathlib import Path
-from lightaero.geometry.ucrm import build_ucrm_geometry
+from aeroflux.geometry.ucrm import build_ucrm_geometry
 
 # Build UCRM geometry with 4 sections
 wing = build_ucrm_geometry(4)
@@ -46,11 +46,11 @@ wing.plot_wing_3d(
 
 ## Citation
 
-If you use lightaero in your research, please cite it using the metadata provided in the [CITATION.cff](./CITATION.cff) file.
+If you use aeroflux in your research, please cite it using the metadata provided in the [CITATION.cff](./CITATION.cff) file.
 
 ## License
 
-lightaero is released under the [Apache License 2.0](./LICENSE).
+aeroflux is released under the [Apache License 2.0](./LICENSE).
 
 ---
 *For more information, see the [CONTRIBUTING.md](./CONTRIBUTING.md) guide.*

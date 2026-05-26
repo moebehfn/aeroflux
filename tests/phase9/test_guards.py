@@ -1,4 +1,4 @@
-# Copyright 2026 lightaero
+# Copyright 2026 aeroflux
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,10 +17,9 @@ import warnings
 
 import numpy as np
 import pytest
-
-from lightaero.aerodynamics.solver import VLMDiscipline
-from lightaero.geometry import build_ucrm_geometry
-from lightaero.schemas.validation import check_regime_validity
+from aeroflux.aerodynamics.solver import VLMDiscipline
+from aeroflux.geometry import build_ucrm_geometry
+from aeroflux.schemas.validation import check_regime_validity
 
 
 def test_check_regime_validity_mach():
@@ -36,10 +35,14 @@ def test_check_regime_validity_mach():
 
 def test_check_regime_validity_aoa():
     # AoA > 10 deg should warn
-    with pytest.warns(UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"):
+    with pytest.warns(
+        UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"
+    ):
         check_regime_validity(mach=0.1, aoa_rad=math.radians(15.0))
 
-    with pytest.warns(UserWarning, match=r"AoA -15.0 deg exceeds typical VLM linear limit"):
+    with pytest.warns(
+        UserWarning, match=r"AoA -15.0 deg exceeds typical VLM linear limit"
+    ):
         check_regime_validity(mach=0.1, aoa_rad=math.radians(-15.0))
 
     # AoA <= 10 deg should not warn
@@ -62,7 +65,9 @@ def test_vlm_discipline_integration_aoa():
     vlm = VLMDiscipline()
 
     # High AoA
-    with pytest.warns(UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"):
+    with pytest.warns(
+        UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"
+    ):
         vlm(wing=wing, alpha_rad=math.radians(15.0), M=0.1, altitude_m=0.0)
 
 
@@ -73,5 +78,7 @@ def test_vlm_discipline_array_aoa():
     # High AoA in array
     alpha_rad = np.zeros(wing.n_panels)
     alpha_rad[0] = math.radians(15.0)
-    with pytest.warns(UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"):
+    with pytest.warns(
+        UserWarning, match=r"AoA 15.0 deg exceeds typical VLM linear limit"
+    ):
         vlm(wing=wing, alpha_rad=alpha_rad, M=0.1, altitude_m=0.0)

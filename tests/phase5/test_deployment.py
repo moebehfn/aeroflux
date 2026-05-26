@@ -8,7 +8,7 @@ def test_site_url_configured():
     """Verify that site_url in mkdocs.yml is correctly set."""
     with open("mkdocs.yml") as f:
         config = yaml.safe_load(f)
-    assert config["site_url"] == "https://moebehfn.github.io/lightaero/"
+    assert config["site_url"] == "https://moebehfn.github.io/aeroflux/"
 
 
 def test_workflow_exists():
@@ -44,11 +44,15 @@ def test_workflow_configuration():
     steps = deploy_job.get("steps", [])
 
     # Check python version
-    setup_python = next((s for s in steps if "actions/setup-python" in s.get("uses", "")), None)
+    setup_python = next(
+        (s for s in steps if "actions/setup-python" in s.get("uses", "")), None
+    )
     assert setup_python is not None
     assert str(setup_python.get("with", {}).get("python-version")) == "3.11"
 
     # Check deployment command
-    deploy_step = next((s for s in steps if "mkdocs gh-deploy" in s.get("run", "")), None)
+    deploy_step = next(
+        (s for s in steps if "mkdocs gh-deploy" in s.get("run", "")), None
+    )
     assert deploy_step is not None
     assert "--force" in deploy_step["run"]

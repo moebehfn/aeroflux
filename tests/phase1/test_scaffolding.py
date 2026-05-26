@@ -12,7 +12,7 @@ def test_files_exist():
 
 def test_license_headers():
     root = Path(__file__).parent.parent.parent
-    src_dir = root / "src" / "lightaero"
+    src_dir = root / "src" / "aeroflux"
 
     python_files = list(src_dir.rglob("*.py"))
     # Exclude macOS metadata files if any were missed

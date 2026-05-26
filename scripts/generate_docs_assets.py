@@ -1,11 +1,13 @@
 import argparse
 from pathlib import Path
 
-from lightaero.geometry.ucrm import build_ucrm_geometry
+from aeroflux.geometry.ucrm import build_ucrm_geometry
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate 3D wing visualization assets.")
+    parser = argparse.ArgumentParser(
+        description="Generate 3D wing visualization assets."
+    )
     parser.add_argument("--output", default="docs/assets/fig.html", help="Output path")
     args = parser.parse_args()
 
@@ -27,7 +29,11 @@ def main():
     # Optimization for dark mode (per D-03)
     # Using plotly_dark template ensures text and grid are visible on dark themes
     # while maintaining transparency for seamless integration.
-    fig.update_layout(template="plotly_dark", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
+    fig.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
     # Ensure scene background is also transparent
     fig.update_scenes(bgcolor="rgba(0,0,0,0)")
 
