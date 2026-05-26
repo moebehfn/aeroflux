@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://moebehfn.github.io/lightaero/theory/assumptions/">
+        <link rel="canonical" href="https://moebehfn.github.io/aeroflux/theory/assumptions/">
       
       
         <link rel="prev" href="../">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Assumptions - lightaero</title>
+        <title>Assumptions - aeroflux</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="lightaero" class="md-header__button md-logo" aria-label="lightaero" data-md-component="logo">
+    <a href="../.." title="aeroflux" class="md-header__button md-logo" aria-label="aeroflux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            lightaero
+            aeroflux
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -190,13 +190,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="lightaero" class="md-nav__button md-logo" aria-label="lightaero" data-md-component="logo">
+    <a href="../.." title="aeroflux" class="md-nav__button md-logo" aria-label="aeroflux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    lightaero
+    aeroflux
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -890,10 +890,10 @@
 
 
 <h1 id="assumptions-limitations">Assumptions &amp; Limitations</h1>
-<p>This page documents the physical and numerical boundaries of the lightaero library. As a low-fidelity tool intended for preliminary research, the library makes several standard simplifications that limit its applicability to specific flight regimes.</p>
+<p>This page documents the physical and numerical boundaries of the aeroflux library. As a low-fidelity tool intended for preliminary research, the library makes several standard simplifications that limit its applicability to specific flight regimes.</p>
 <h2 id="major-physical-assumptions">Major Physical Assumptions</h2>
 <h3 id="aerodynamics">Aerodynamics</h3>
-<p>lightaero's primary aerodynamic solver is based on the <strong>Vortex Lattice Method (VLM)</strong>.</p>
+<p>aeroflux's primary aerodynamic solver is based on the <strong>Vortex Lattice Method (VLM)</strong>.</p>
 <ul>
 <li><strong>Inviscid Flow</strong>: The fluid is assumed to be inviscid (no boundary layers, no separation). While profile drag is estimated using empirical form factors, it does not capture separation-induced drag.</li>
 <li><strong>Incompressible Flow</strong>: The standard VLM implementation assumes the fluid is incompressible. Compressibility effects (Prandtl-Glauert) are currently not implemented.</li>
@@ -965,7 +965,7 @@ At 10,000 m, the error is approximately 16m (0.16%), which is generally consider
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 lightaero
+      Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 aeroflux
     </div>
   
   

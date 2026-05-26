@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://moebehfn.github.io/lightaero/theory/structures/">
+        <link rel="canonical" href="https://moebehfn.github.io/aeroflux/theory/structures/">
       
       
         <link rel="prev" href="../atmosphere/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Structures - lightaero</title>
+        <title>Structures - aeroflux</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="lightaero" class="md-header__button md-logo" aria-label="lightaero" data-md-component="logo">
+    <a href="../.." title="aeroflux" class="md-header__button md-logo" aria-label="aeroflux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            lightaero
+            aeroflux
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -190,13 +190,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="lightaero" class="md-nav__button md-logo" aria-label="lightaero" data-md-component="logo">
+    <a href="../.." title="aeroflux" class="md-nav__button md-logo" aria-label="aeroflux" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    lightaero
+    aeroflux
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1080,9 +1080,9 @@
 
 
 <h1 id="structural-theory">Structural Theory</h1>
-<p>This page details the structural analysis methods and assumptions used in lightaero.</p>
+<p>This page details the structural analysis methods and assumptions used in aeroflux.</p>
 <h2 id="finite-element-model-fem">Finite Element Model (FEM)</h2>
-<p>lightaero implements a 1D finite-element model of the wing spar based on Euler-Bernoulli beam theory.</p>
+<p>aeroflux implements a 1D finite-element model of the wing spar based on Euler-Bernoulli beam theory.</p>
 <h3 id="euler-bernoulli-beam">Euler-Bernoulli Beam</h3>
 <p>The model uses standard Hermite cubic shape functions for transverse displacement and slope.</p>
 <h4 id="element-stiffness-matrix-k_e">Element Stiffness Matrix (<span class="arithmatex">\(K_e\)</span>)</h4>
@@ -1108,7 +1108,7 @@
 <p>where <span class="arithmatex">\(\rho\)</span> is the material density and <span class="arithmatex">\(A\)</span> is the cross-sectional area.</p>
 <div class="admonition warning">
 <p class="admonition-title">Implementation Note: Static Analysis Only</p>
-<p>Although the theoretical mass matrix formulas are provided above, the current structural discipline implementation in lightaero is limited to <strong>static analysis</strong>. Dynamic effects such as flutter, gust response, and modal analysis are not yet supported.</p>
+<p>Although the theoretical mass matrix formulas are provided above, the current structural discipline implementation in aeroflux is limited to <strong>static analysis</strong>. Dynamic effects such as flutter, gust response, and modal analysis are not yet supported.</p>
 </div>
 <h3 id="thin-walled-section-properties">Thin-Walled Section Properties</h3>
 <p>Wingbox section properties (<span class="arithmatex">\(I_{xx}\)</span>, <span class="arithmatex">\(I_{zz}\)</span>, <span class="arithmatex">\(J\)</span>) are computed using numerical integration over a closed single-cell box outline (typically 15% to 65% chord).</p>
@@ -1182,7 +1182,7 @@ m_{wing} = 2 \int_0^{b/2} \rho A_{cross} k_{struct} dy
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 lightaero
+      Low-fidelity tool for research only. Not production/industry ready. | Copyright &copy; 2026 aeroflux
     </div>
   
   
